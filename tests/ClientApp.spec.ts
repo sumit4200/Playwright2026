@@ -1,7 +1,7 @@
 import {Locator, test,expect} from "@playwright/test";
 
 
-test.only("Client App Login",async({page})=>{
+test("Client App Login",async({page})=>{
 
 const productName = "ZARA COAT 3";
 const allproducts:Locator = page.locator("[class='card-body']");

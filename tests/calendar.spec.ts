@@ -44,12 +44,12 @@ while(  !( (await title.textContent())?.replace(/\s/g,"")== "June2027" ))
     if(d==="23")
         await date.click();
     
-
+ 
   }
 
     let val:string = await iframeEle.locator("#datepicker").first().inputValue();
   console.log(val);
-     
+     //
 
 
 });
