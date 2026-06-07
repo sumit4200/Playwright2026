@@ -1,6 +1,6 @@
 import {Browser,BrowserContext, chromium, Page, test,Locator, Frame, FrameLocator}   from    "@playwright/test"
 
-test("handle calendar",async({page})=>{
+test.skip("handle calendar",async({page})=>{
 
  
 

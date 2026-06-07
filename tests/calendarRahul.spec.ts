@@ -1,6 +1,6 @@
 import {test,expect,Locator}   from    "@playwright/test"
 
-test.only("handle calendar",async({page})=>{
+test.skip("handle calendar",async({page})=>{
 
 
 

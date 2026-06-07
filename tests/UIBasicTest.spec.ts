@@ -41,8 +41,7 @@ test("Browser Context - Validating Error Login",async({browser})=>{
         let text = await product.textContent();
         console.log(text);
     }
-
-    await page.waitForTimeout(3333);
+ 
 });
 
 test("UI Controls",async({page})=>{
@@ -83,7 +82,6 @@ test("UI Controls",async({page})=>{
     if(attr)
         console.log("----------------->"+attr);
 
-    await page.waitForTimeout(2000);
 
  });
 
@@ -125,7 +123,6 @@ test("Handle child windows",async({browser})=>{
     let email_textbox:string|null = await userName.inputValue();
     if(email_textbox)
     console.log("email value entered is = "+email_textbox);
-
-    await newPage.waitForTimeout(4000);
+   
  
 });

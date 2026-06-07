@@ -123,6 +123,7 @@ for(let i=0;i<ordersIDList.length;++i)
 }
  if(orderIdProd)
  await expect(page.locator("[class='col-title']+div")).toHaveText(orderIdProd);
-await page.waitForTimeout(2000);
  
 });
+
+ 
