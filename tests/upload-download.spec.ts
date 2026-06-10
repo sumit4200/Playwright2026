@@ -60,13 +60,13 @@ test.only('Upload download test validation', async ({ page }) => {
     );
 
     const searchText = 'Mango';
-    const updateValue = '10';
+    const updateValue = '990';
 
     const [download] = await Promise.all([
         page.waitForEvent('download'),
         page.locator('#downloadButton').click()
     ]);
-
+   console.log("======>" +download.suggestedFilename());
     const downloadPath =
         'C:/Users/goyal/Downloads/download.xlsx';
 
