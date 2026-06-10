@@ -28,7 +28,7 @@ test("Screenshot and Visual Comparision",async({page})=>{
     
 });
 
-test.only("Visual",async({page})=>{
+test("Visual",async({page})=>{
 
     await page.goto("https://flightware.com");
     expect(await page.screenshot()).toMatchSnapshot('Landing.png');
