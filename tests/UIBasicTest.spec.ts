@@ -6,7 +6,7 @@ test("Browser Context - Validating Error Login",async({browser})=>{
     
     const browserContext:BrowserContext = await browser.newContext();
     const page:Page = await browserContext.newPage();
-
+    page.route("**/*.jpeg",route=>route.abort());
     const userName:Locator = page.locator("#username");
     const password:Locator = page.locator("[type='password']");
     const signInBtn:Locator = page.locator("input[id='signInBtn']");
@@ -14,6 +14,8 @@ test("Browser Context - Validating Error Login",async({browser})=>{
     const iphoneX:Locator = page.locator(".card-title a");
     const allProducts:Locator = page.locator(".card-title a");
 
+    page.on('request',request=> console.log(request.url()));
+    page.on('response',response=> console.log(response.url() , response.status()));
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
    
     await userName.pressSequentially("rahulshettyacademy9",{delay:1});

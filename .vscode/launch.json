@@ -2,18 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug calendar test",
+      "name": "Playwright Debug",
       "type": "node",
       "request": "launch",
+      "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
       "args": [
         "test",
-        "tests/calendar.spec.ts",
+        "tests/WebAPIPart1.spec.ts",
         "--headed",
         "--workers=1"
       ],
-      "skipFiles": ["<node_internals>/**"],
-      "console": "integratedTerminal"
+       
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
     }
   ]
 }

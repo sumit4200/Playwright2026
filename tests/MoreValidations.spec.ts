@@ -19,3 +19,18 @@ test("Popup Validations",async({page})=>{
 
 
 });
+
+test("Screenshot and Visual Comparision",async({page})=>{
+
+    await page.goto("https://rahulshettyacademy.com/AutomationPractice");
+    // await page.screenshot({path:'./tests/screenshot.png'});
+    await page.locator("#openwindow").screenshot({path:'./utils/partialscreenshot.png'});
+    
+});
+
+test.only("Visual",async({page})=>{
+
+    await page.goto("https://flightware.com");
+    expect(await page.screenshot()).toMatchSnapshot('Landing.png');
+    
+});

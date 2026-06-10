@@ -12,8 +12,7 @@ let response: {
 
 test.beforeAll(async ()=>{
 
-    //Login API
-     
+    //Login API 
     let apiContext:APIRequestContext = await request.newContext();
     
     const apiutils = new APIUtils(apiContext,loginPayLoad);
@@ -22,7 +21,7 @@ test.beforeAll(async ()=>{
 
 });
 
-test.only("Place the order",async({page})=>{
+test("Place the order",async({page})=>{
 
 
     await page.addInitScript(value=>{
