@@ -21,7 +21,7 @@ test.beforeAll(async ()=>{
 
 });
 
-test("Place the order",async({page})=>{
+test("@regression Place the order",async({page})=>{
 
 
     await page.addInitScript(value=>{

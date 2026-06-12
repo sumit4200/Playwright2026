@@ -54,7 +54,7 @@ async function readExcelTest(
     return output;
 }
 
-test.only('Upload download test validation', async ({ page }) => {
+test('Upload download test validation', async ({ page }) => {
 
     await page.goto(
         'https://rahulshettyacademy.com/upload-download-test/index.html'

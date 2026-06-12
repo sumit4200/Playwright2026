@@ -46,7 +46,7 @@ test("Browser Context - Validating Error Login",async({browser})=>{
  
 });
 
-test("UI Controls",async({page})=>{
+test("@API UI Controls",async({page})=>{
 
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 

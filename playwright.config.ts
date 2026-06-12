@@ -23,7 +23,8 @@ export default defineConfig({
   retries: 1,
   /* Opt out of parallel tests on CI. */
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: 
+   [["line"], ["allure-playwright"], ['html']],
   timeout:40000,
   expect:{
     timeout:5000
@@ -47,6 +48,7 @@ export default defineConfig({
        
         trace:'retain-on-failure',
         video:'retain-on-failure',
+        screenshot:'on'
         
 
 

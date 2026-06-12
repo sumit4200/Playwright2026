@@ -3,9 +3,7 @@ import {Locator, test,expect} from "@playwright/test";
 
 test("Webst Client App Login",async({page})=>{
 
-const productName = "ZARA COAT 3";
-const allproducts:Locator = page.locator("[class='card-body']");
-const products = page.locator(".card-body");
+ 
 await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
 const userName:Locator = page.getByPlaceholder("email@example.com");
 const userPass:Locator = page.getByPlaceholder("enter your passsword");
@@ -42,7 +40,7 @@ let visibleCoat:boolean = await page.locator("h3:has-Text('ZARA COAT 3')").isVis
 console.log(visibleCoat+"----------------");
 expect(visibleCoat).toBeTruthy();
 
-// await page.getByText("Checkout").click();
+ await page.getByText("Checkout").click();
 await page.getByRole("button",{name:'Checkout'}).click();
 await page.getByPlaceholder("Select Country").pressSequentially("in",{delay:200});
 
@@ -62,7 +60,7 @@ for(let data of country)
         if(country_txt==="India")
     {
 
-        await data.click();
+       // await data.click();
         break;
     }
     }

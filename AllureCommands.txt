@@ -1,0 +1,9 @@
+npm install --save-dev @playwright/test allure-playwright
+
+npm install -g allure-commandline
+
+allure generate --clean
+
+allure generate processes the test results and saves an HTML report into the allure-report directory. To view the report, use the allure open command.
+OR
+allure serve creates the same report as allure generate, then automatically opens the main page of the report in a web browser.

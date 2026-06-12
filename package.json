@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "regression": "npx playwright test",
+    "webTests" : "npx playwright test --grep @Web",
+    "APITests" : "npx playwright test --grep @api"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
     "@azure/playwright": "^1.1.5",
     "@playwright/test": "^1.60.0",
     "@types/node": "^10.12.0",
-      "exceljs": "^4.4.0"
+    "allure-playwright": "^3.10.0",
+    "exceljs": "^4.4.0"
   }
 }
